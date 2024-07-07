@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+form{
+    margin: 1rem;
+    padding: 0.3em;
+    
+}
+
+form label{
+    font-weight: bold;
+    /* display: block; */
+}
+
+#field_set{
+    width: fit-content;
+    height: auto;
+    padding: 2rem;
+}
+
+legend{
+    margin-top: 0.2em;
+}
+.block_elts label{
+    display: block;
+    padding: 0.3rem;
+}
+.gender , .interest{
+    display: inline-block;
+    justify-content: space-evenly;
+    margin: 2rem;
+    padding: 0.5rem;
+} 

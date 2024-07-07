@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block extra_css %}<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">{% endblock %}
+{% block title %} Register-form {% endblock %}
+
+{% block body %}
+<fieldset id="field_set">
+    <legend>User information</legend>
+    <form method="POST" action="{{url_for('index')}}" >
+        {{form.hidden_tag() }}
+        <p>
+            <div class="block_elts">
+            {{form.fname.label}} {{form.fname}}
+            {{form.lname.label}} {{form.lname}}
+            {{form.email.label}} {{form.email}}
+            {{form.password.label}} {{form.password}}
+            {{form.confirm_password.label}} {{form.confirm_password}}
+            {{form.gender.label}}</div>
+            <div id="gender">
+            {% for options in form.gender %}
+                {{ options() }}{{options.label }}
+            {% endfor %}</div>
+            <div class="block_elts">{{form.interest.label}}</div>
+            <div id="interest">
+            {% for options in form.interest %}
+                {{ options() }}{{options.label }}
+            {% endfor %}</div>
+            
+
+            {{form.city.label}}{{form.city}}
+
+            <div class="block_elts">{{form.comment.label}} {{form.comment}}</div>
+            {{form.submit}}
+        
+        </p>
+    </form>
+</fieldset>
+{% endblock %}
